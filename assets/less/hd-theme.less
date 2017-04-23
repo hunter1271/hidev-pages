@@ -1,0 +1,46 @@
+@import "variables";
+@import "mixins";
+
+// Buttons
+.btn {
+  border-radius: @btn-border-radius;
+}
+.btn-primary { .btn-styles(@btn-primary-bg); }
+
+// Common styles
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  text-shadow: 0 1px 0 rgba(44, 44, 44, 0.1);
+  color: #222;
+}
+
+.nav-pills {
+  margin: @nav-pills-margin-top auto @nav-pills-margin-bottom auto;
+  border-radius: 3px;
+  overflow: hidden;
+  > li > a {
+    border-radius: 0;
+    background-color: @nav-pills-bg-color;
+    color: @nav-pills-text-color;
+    opacity: .6;
+    font-weight: bold;
+    text-transform: uppercase;
+  }
+
+  > li > a:hover {
+    background-color: @nav-pills-bg-color-hover;
+    opacity: .75;
+  }
+
+  >li.active > a,
+  >li.active > a:hover,
+  >li > a:focus {
+    background-color: @nav-pills-bg-color-active;
+    opacity: 1;
+  }
+}

@@ -2,10 +2,12 @@ var gulp = require('gulp');
 var concat = require('gulp-concat');
 var sourcemaps = require('gulp-sourcemaps');
 var del = require('del');
+var less = require('gulp-less');
+var path = require('path');
 
 var paths = {
-    bootstrap_css: ['node_modules/bootstrap/dist/css/*.css'],
-    css: ['assets/css/*.css']
+    bootstrap_css: ['node_modules/bootstrap/dist/css/bootstrap.css'],
+    less: ['assets/less/*.less'],
 };
 
 gulp.task('clean', function() {
@@ -20,17 +22,20 @@ gulp.task('bootstrap_css', function() {
         .pipe(gulp.dest('build/css'));
 });
 
-gulp.task('css', function() {
-    return gulp.src(paths.css)
+gulp.task('less', function () {
+    return gulp.src(paths.less)
         .pipe(sourcemaps.init())
-        .pipe(concat('styles.css'))
+        .pipe(less({
+            paths: [path.join(paths.less[0], 'mixins')]
+        }))
+        .pipe(concat('hd-theme.css'))
         .pipe(sourcemaps.write())
         .pipe(gulp.dest('build/css'));
 });
 
 gulp.task('watch', function() {
     gulp.watch(paths.bootstrap_css, ['bootstrap_css']);
-    gulp.watch(paths.css, ['css']);
+    gulp.watch(paths.less, ['less']);
 });
 
-gulp.task('default', ['watch', 'clean', 'bootstrap_css', 'css']);
+gulp.task('default', ['watch', 'clean', 'bootstrap_css', 'less']);
