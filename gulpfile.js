@@ -1,25 +1,27 @@
+'use strict'
+
 var gulp = require('gulp');
 var concat = require('gulp-concat');
 var sourcemaps = require('gulp-sourcemaps');
 var del = require('del');
 var less = require('gulp-less');
+var sass = require('gulp-sass')
 var path = require('path');
+var pug = require('gulp-pug');
 
 var paths = {
     bootstrap_css: ['node_modules/bootstrap/dist/css/bootstrap.css'],
     less: ['assets/less/*.less'],
+    views: ['src/*.pug'],
+    dist: ['./build']
 };
-
-gulp.task('clean', function() {
-    return del(['build']);
-});
 
 gulp.task('bootstrap_css', function() {
     return gulp.src(paths.bootstrap_css)
         .pipe(sourcemaps.init())
         .pipe(concat('bootstrap.css'))
         .pipe(sourcemaps.write())
-        .pipe(gulp.dest('build/css'));
+        .pipe(gulp.dest(`${paths.dist}/css`));
 });
 
 gulp.task('less', function () {
@@ -30,12 +32,27 @@ gulp.task('less', function () {
         }))
         .pipe(concat('hd-theme.css'))
         .pipe(sourcemaps.write())
-        .pipe(gulp.dest('build/css'));
+        .pipe(gulp.dest(`${paths.dist}/css`));
 });
 
 gulp.task('watch', function() {
     gulp.watch(paths.bootstrap_css, ['bootstrap_css']);
     gulp.watch(paths.less, ['less']);
+    gulp.watch(paths.views, ['views']);
 });
 
-gulp.task('default', ['watch', 'clean', 'bootstrap_css', 'less']);
+gulp.task('views', function () {
+    return gulp.src(paths.views)
+        .pipe(pug({
+            pretty: true,
+        }))
+        .pipe(gulp.dest(`${paths.dist}/`))
+});
+
+gulp.task('sass', function () {
+    gulp.src('./src/assets/index.scss')
+    .pipe(sass().on('error', sass.logError))
+    .pipe(gulp.dest(`${paths.dist}/css`))
+})
+
+gulp.task('default', ['watch', 'views', 'bootstrap_css', 'less', 'sass']);

@@ -9,7 +9,11 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "bootstrap": "^3.3.7"
+    "bootstrap": "^3.3.7",
+    "gulp-connect": "^5.0.0",
+    "gulp-pug": "^3.3.0",
+    "gulp-sass": "^3.1.0",
+    "pug": "^2.0.0-rc.2"
   },
   "devDependencies": {
     "del": "^2.2.2",

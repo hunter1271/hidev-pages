@@ -1,0 +1,20 @@
+.vacancy-card {
+  text-decoration: none;
+  cursor: pointer;
+
+  &:hover,
+  &:visited {
+    border-color: #ddd;
+  }
+
+  .header {
+    font-size: 16px;
+    font-weight: bold;
+    margin: 6px 0 14px 0;
+  }
+
+  .company-name {
+    margin: 0;
+    font-size: 16px;
+  }
+}
