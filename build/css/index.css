@@ -1,0 +1,18 @@
+.category_list {
+  margin: 30px auto 30px auto; }
+  .category_list > .category_list__header {
+    margin-top: 50px;
+    margin-bottom: 50px; }
+
+.vacancy-card {
+  text-decoration: none;
+  cursor: pointer; }
+  .vacancy-card:hover, .vacancy-card:visited {
+    border-color: #ddd; }
+  .vacancy-card .header {
+    font-size: 16px;
+    font-weight: bold;
+    margin: 6px 0 14px 0; }
+  .vacancy-card .company-name {
+    margin: 0;
+    font-size: 16px; }
