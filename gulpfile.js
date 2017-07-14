@@ -14,6 +14,7 @@ var paths = {
     bootstrap_css: ['node_modules/bootstrap/dist/css/bootstrap.css'],
     less: ['assets/less/*.less'],
     views: ['src/*.pug'],
+    scss: ['src/assets/*.scss'],
     dist: ['./build']
 };
 
@@ -40,6 +41,7 @@ gulp.task('watch', function() {
     gulp.watch(paths.bootstrap_css, ['bootstrap_css']);
     gulp.watch(paths.less, ['less']);
     gulp.watch(paths.views, ['views']);
+    gulp.watch(paths.scss, ['scss']);
 });
 
 gulp.task('views', function () {
@@ -50,7 +52,7 @@ gulp.task('views', function () {
         .pipe(gulp.dest(`${paths.dist}/`))
 });
 
-gulp.task('sass', function () {
+gulp.task('scss', function () {
     gulp.src('./src/assets/index.scss')
     .pipe(sass().on('error', sass.logError))
     .pipe(gulp.dest(`${paths.dist}/css`))
@@ -67,4 +69,4 @@ gulp.task('webserver', function() {
         }));
 });
 
-gulp.task('default', ['watch', 'views', 'bootstrap_css', 'less', 'sass', 'webserver']);
+gulp.task('default', ['watch', 'views', 'bootstrap_css', 'less', 'scss', 'webserver']);
