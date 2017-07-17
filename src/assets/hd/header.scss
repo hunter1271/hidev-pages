@@ -35,6 +35,11 @@
   }
 }
 
+h1[id] {
+  padding-top: 20px;
+  margin-top: 0;
+}
+
 //@media (min-width: 992px) {
 //  .hd-header h1,
 //  .hd-header p {

@@ -22,19 +22,36 @@ block content
         div.container.hd-container
             div.row
                 div.col-md-9
-                    h1.page-header Vacancies
-                    include ./_include/card
-                    include ./_include/card
-                    include ./_include/card
-                    include ./_include/card
+                    h1.page-header#vacancies Vacancies
+                    h3#development Developers
+                    include ./_include/vacancy-card
+                    include ./_include/vacancy-card
+                    include ./_include/vacancy-card
+                    h3#q_a Q/A
+                    include ./_include/vacancy-card
+                    include ./_include/vacancy-card
+                    h3#sales Sales
+                    include ./_include/vacancy-card
+                    h3#operations Operations
+                    include ./_include/vacancy-card
+                    include ./_include/vacancy-card
 
 
 
                 div.col-md-3
                     div.hd-sidebar
                         ul.nav.hd-sidenav
-                            li
-                                a(href="#") Section 1
+                            li.active
+                                a(href="#") Vacancies
+                                ul.nav
+                                    li
+                                        a(href="#") Developers
+                                    li
+                                        a(href="#") Q/A
+                                    li
+                                        a(href="#") Sales
+                                    li
+                                        a(href="#") Operations
                             li
                                 a(href="#") Section 2
                             li

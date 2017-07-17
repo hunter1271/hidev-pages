@@ -1,20 +1,32 @@
+$active_vacancy_card_background_color: #f9f9f9;
+
 .vacancy-card {
-  text-decoration: none;
-  cursor: pointer;
-
+  display: block;
+  position: relative;
+  border: solid 1px lightgray;
+  border-radius: 2px;
+  padding: 8px 10px;
+  margin:10px 0 20px 0;
+  color: inherit;
   &:hover,
-  &:visited {
-    border-color: #ddd;
+  &:visited,
+  &:active {
+    background-color: $active_vacancy_card_background_color;
+    color: inherit;
+    cursor: pointer;
+    text-decoration: none;
   }
-
-  .header {
-    font-size: 16px;
-    font-weight: bold;
-    margin: 6px 0 14px 0;
+  > .position {
+    margin-right: 150px;
   }
-
-  .company-name {
-    margin: 0;
-    font-size: 16px;
+  > .organization {
+    margin-right: 300px;
+  }
+  > .details {
+    position: absolute;
+    top: 16px;
+    right: 0;
+    text-align: right;
+    padding-right: 6px;
   }
 }
