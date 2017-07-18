@@ -14,7 +14,7 @@ var paths = {
     bootstrap_css: ['node_modules/bootstrap/dist/css/bootstrap.css'],
     less: ['assets/less/*.less'],
     views: ['src/*.pug', 'src/_include/*.pug'],
-    scss: ['src/assets/*.scss'],
+    scss: ['src/assets/*.scss', 'src/assets/hd/*.scss'],
     dist: ['./build']
 };
 
