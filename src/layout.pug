@@ -12,7 +12,8 @@ html
         content="width=device-width, initial-scale=1"
         )
 
-        title Hidev pages
+        title
+            block title
 
         link(
         rel="stylesheet"
@@ -30,7 +31,19 @@ html
         href="css/index.css"
         )
     body
-        block content
+        block body
+            include ./_include/header
+            div.hd-header
+                div.container
+                    block masthead
+            div.container.hd-container
+                div.row
+                    div.col-md-9
+                        block content
+
+                    div.col-md-3
+                        block right
+
         footer.hd-footer
             div.container
                 ul.hd-footer-links

@@ -30,7 +30,8 @@ gulp.task('bootstrap_css', function() {
 gulp.task('watch', function() {
     gulp.watch(paths.bootstrap_css, ['bootstrap_css']);
     gulp.watch(paths.less, ['less']);
-    gulp.watch(paths.views, ['views', 'includes']);
+    gulp.watch(paths.views, ['views']);
+    gulp.watch(paths.includes, ['views']);
     gulp.watch(paths.scss, ['scss']);
 });
 
