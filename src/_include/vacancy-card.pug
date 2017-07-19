@@ -1,6 +1,7 @@
-a(href="#").vacancy-card
-    h4.position Middle Scala developer
-    p.organization AWS Company.Inc
-    div.details
-        p.type FULLTIME
-        p.location Russia, Moscow
+mixin vacancy_card(position, organization, location)
+    a(href="#").vacancy-card
+        h4.position= position
+        p.organization= organization
+        div.details
+            p.type FULLTIME
+            p.location= location

@@ -13,7 +13,8 @@ var webserver = require('gulp-webserver');
 var paths = {
     bootstrap_css: ['node_modules/bootstrap/dist/css/bootstrap.css'],
     less: ['assets/less/*.less'],
-    views: ['src/*.pug', 'src/_include/*.pug'],
+    views: ['src/*.pug'],
+    includes: ['src/_include/*.pug'],
     scss: ['src/assets/*.scss', 'src/assets/hd/*.scss'],
     dist: ['./build']
 };
@@ -26,21 +27,10 @@ gulp.task('bootstrap_css', function() {
         .pipe(gulp.dest(`${paths.dist}/css`));
 });
 
-// gulp.task('less', function () {
-//     return gulp.src(paths.less)
-//         .pipe(sourcemaps.init())
-//         .pipe(less({
-//             paths: [path.join(paths.less[0], 'mixins')]
-//         }))
-//         .pipe(concat('hd-theme.css'))
-//         .pipe(sourcemaps.write())
-//         .pipe(gulp.dest(`${paths.dist}/css`));
-// });
-
 gulp.task('watch', function() {
     gulp.watch(paths.bootstrap_css, ['bootstrap_css']);
     gulp.watch(paths.less, ['less']);
-    gulp.watch(paths.views, ['views']);
+    gulp.watch(paths.views, ['views', 'includes']);
     gulp.watch(paths.scss, ['scss']);
 });
 
