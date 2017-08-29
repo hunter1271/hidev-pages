@@ -1,0 +1,17 @@
+extends layout
+
+include _include/company-card
+
+block title
+    .
+        Companies list
+
+block masthead
+    h1 Companies
+
+block content
+    +company_card('ABC Tech')
+    +company_card('Lamoda')
+    +company_card('Dooglyes')
+    +company_card('Informika.ru')
+    +company_card('ABC Tech')

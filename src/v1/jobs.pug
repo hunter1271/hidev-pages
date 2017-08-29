@@ -1,0 +1,17 @@
+extends layout
+
+include _include/vacancy-card
+
+block title
+    .
+        Jobs
+
+block masthead
+    h1 Jobs
+
+block content
+    +job_card_full('PHP Developer', 'ABC Tech')
+    +job_card_full('Senior Q/A Engineer', 'Lamoda')
+    +job_card_full('Java Developer', 'Dooglyes')
+    +job_card_full('React Developer', 'Informika.ru')
+    +job_card_full('Frontend developer', 'ABC Tech')

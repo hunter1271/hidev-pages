@@ -13,9 +13,9 @@ var webserver = require('gulp-webserver');
 var paths = {
     bootstrap_css: ['node_modules/bootstrap/dist/css/bootstrap.css'],
     less: ['assets/less/*.less'],
-    views: ['src/*.pug'],
-    includes: ['src/_include/*.pug'],
-    scss: ['src/assets/*.scss', 'src/assets/hd/*.scss'],
+    views: ['src/*/*.pug'],
+    includes: ['src/*/*/*.pug'],
+    scss: ['src/*/*/*.scss'],
     dist: ['./build']
 };
 
@@ -50,7 +50,7 @@ gulp.task('scss', function () {
 })
 
 gulp.task('webserver', function() {
-    gulp.src('./build')
+    gulp.src('./build/')
         .pipe(webserver({
             livereload: true,
             path: '/',

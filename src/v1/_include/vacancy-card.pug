@@ -1,0 +1,12 @@
+mixin vacancy_card(position)
+    a(href="job.html").vacancy-card
+        h4.position= position
+        div.details
+            p.type FULLTIME
+
+mixin job_card_full(position, company)
+    a(href="job.html").vacancy-card
+        h4.position= position
+        p.organization= company
+        div.details
+            p.type FULLTIME
