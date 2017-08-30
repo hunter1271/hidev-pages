@@ -10,19 +10,14 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "bootstrap": "^3.3.7",
-    "gulp-connect": "^5.0.0",
-    "gulp-pug": "^3.3.0",
-    "gulp-sass": "^3.1.0",
-    "pug": "^2.0.0-rc.2"
+    "bootstrap": "^4.0.0-beta"
   },
   "devDependencies": {
-    "del": "^2.2.2",
     "gulp": "^3.9.1",
     "gulp-concat": "^2.6.1",
-    "gulp-less": "^3.3.0",
-    "gulp-sourcemaps": "^2.6.0",
-    "gulp-webserver": "^0.9.1",
-    "path": "^0.12.7"
+    "gulp-pug": "^3.3.0",
+    "gulp-sass": "^3.1.0",
+    "gulp-sourcemaps": "^2.6.1",
+    "pug": "^2.0.0-rc.3"
   }
 }
