@@ -1,0 +1,16 @@
+.meta {
+    > .meta-item {
+        float: left;
+        margin-right: 50px;
+        min-width: 80px;
+
+        > .meta-caption,
+        > .meta-value {
+            display: block;
+        }
+
+        > .meta-caption {
+            font-weight: bold;
+        }
+    }
+}

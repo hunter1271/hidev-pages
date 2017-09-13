@@ -8,12 +8,63 @@ html(lang='ru')
             link(rel='stylesheet' href='css/bootstrap.css')
             link(rel='stylesheet' href='css/styles.css')
     body
-        block main
+        block page
             .bg-primary
                 div.container
                     nav.navbar.navbar-dark.navbar-expand-lg
                         a.navbar-brand(href="#") hidev
 
             header
-                .container
+                .container.clearfix
+                    .float-left
+                        h1 Scala Developer/Team-lead
+                        p.lead
+                            a(href="#") Awesome Corp,
+                            span.text-muted Russia, Moscow
+
+                    .meta.float-right
+                        .meta-item
+                            .meta-caption Salary
+                            .meta-value 1500-18000 USD
+                        .meta-item
+                            .meta-caption Job type
+                            .meta-value Full-time
+                        .meta-item
+                            .meta-caption Experience
+                            .meta-value 3-6 year
+
+            .container
+                .row
+                    .col-8
+                        main(role="main")
+                            .stack
+                                span.badge.badge-info PHP7
+                                span.badge.badge-info Symfony
+                                span.badge.badge-info Doctrine
+                                span.badge.badge-info Postgres
+                                span.badge.badge-info Nginx
+                                span.badge.badge-info Slack
+                                span.badge.badge-info Jira
+                                span.badge.badge-info Scrum/Agile
+
+                            .decsription
+                                h4 About this job
+                                p Maecenas tristique dictum dui ut malesuada. Suspendisse a auctor lectus, non commodo nunc. Phasellus rhoncus a urna eget ultrices. Ut vulputate eros eu augue tincidunt semper. Cras a sapien magna. Pellentesque eu pretium massa, id elementum mi.
+
+                                h4 Requirements
+                                p Maecenas tristique dictum dui ut malesuada. Suspendisse a auctor lectus, non commodo nunc. Phasellus rhoncus a urna eget ultrices. Ut vulputate eros eu augue tincidunt semper. Cras a sapien magna. Pellentesque eu pretium massa, id elementum mi.
+
+                                h4 Benefits
+                                p Maecenas tristique dictum dui ut malesuada. Suspendisse a auctor lectus, non commodo nunc. Phasellus rhoncus a urna eget ultrices. Ut vulputate eros eu augue tincidunt semper. Cras a sapien magna. Pellentesque eu pretium massa, id elementum mi.
+
+                            .extra
+                                p.text-muted Published at 2017.08.23 15.00
+                    .col-4
+                        .actions
+                            button.btn.btn-success.btn-block Apply now
+
+
+
+
+
 
