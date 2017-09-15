@@ -1,0 +1,36 @@
+extends layout
+
+block header
+    .container.clearfix
+        .float-left
+            h1 AWS Solutions Inc.
+            p.lead
+                a(href="#") http://awesome.dev
+
+        .meta.float-right
+            .meta-item
+                .meta-caption Headquarters
+                .meta-value Kazan, Russia
+            .meta-item
+                .meta-caption Founded
+                .meta-value 2012
+
+block main
+    .description
+        h4 Jobs
+        .jobs
+            a(href="#").card
+                .card-body
+                    .float-left
+                        h4.card-title PHP Developer
+                        h6.card-subtitle Kazan, Russia
+                    .float-right
+                        span.card-subtitle FULLTIME
+
+
+
+    .extra
+        p.text-muted Joined at 2017.08.23
+
+block aside
+    p Social profiles
