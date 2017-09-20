@@ -4,6 +4,10 @@
         margin-right: 50px;
         min-width: 80px;
 
+        &:last-child {
+            margin-right: 0;
+        }
+
         > .meta-caption,
         > .meta-value {
             display: block;
@@ -13,4 +17,5 @@
             font-weight: bold;
         }
     }
+
 }

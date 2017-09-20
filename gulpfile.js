@@ -56,7 +56,7 @@ gulp.task('server', function() {
         .pipe(webserver({
             livereload: true,
             path: '/',
-            port: 8080,
+            port: 8099,
             fallback: 'layout.html'
         }));
 });
