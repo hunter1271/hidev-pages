@@ -1,4 +1,6 @@
 .meta {
+    margin-top: 4px;
+
     > .meta-item {
         float: left;
         margin-right: 50px;
@@ -15,6 +17,7 @@
 
         > .meta-caption {
             font-weight: bold;
+            line-height: 1.45rem;
         }
     }
 

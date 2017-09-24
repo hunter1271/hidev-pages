@@ -9,18 +9,19 @@ html(lang='ru')
             link(rel='stylesheet' href='css/styles.css')
     body
         block page
-            .bg-primary
+            .bg-hidev
                 div.container
-                    nav.navbar.navbar-dark.navbar-expand-lg
-                        a.navbar-brand(href="layout.html") hidev
-                        .collapse.navbar-collapse
-                            ul.navbar-nav
-                                li.nav-item
-                                    a(href="job.html").nav-link.active Jobs
-                                li.nav-item
-                                    a(href="company.html").nav-link Companies
-                                li.nav-item
-                                    a(href="#").nav-link Technologies
+                    .row
+                        nav.navbar.navbar-dark.navbar-expand-lg
+                            a.navbar-brand.brand-small(href="layout.html") hidev.io
+                            .collapse.navbar-collapse
+                                ul.navbar-nav
+                                    li.nav-item
+                                        a(href="job.html").nav-link.active Jobs
+                                    li.nav-item
+                                        a(href="company.html").nav-link Companies
+                                    li.nav-item
+                                        a(href="#").nav-link Technologies
 
             header
                 block header
@@ -68,7 +69,7 @@ html(lang='ru')
                                     p Maecenas tristique dictum dui ut malesuada. Suspendisse a auctor lectus, non commodo nunc. Phasellus rhoncus a urna eget ultrices. Ut vulputate eros eu augue tincidunt semper. Cras a sapien magna. Pellentesque eu pretium massa, id elementum mi.
 
                                 .extra
-                                    p.text-muted Published at 2017.08.23 15.00
+                                    p.text-muted Posted: 2017.08.23 15.00
                     .col-4
                         aside
                             block aside
