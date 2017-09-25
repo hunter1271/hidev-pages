@@ -1,19 +1,23 @@
 extends layout
 
 block header
-    .container.clearfix
-        .float-left
+    .container.clearfix.clearfix.mt-4.mb-2
+        .masthead.float-left
             h1 AWS Solutions Inc.
-            p.lead
-                a(href="#") http://awesome.dev
+            p.lead.mt-3
 
-        .meta.float-right
+
+        .meta.float-right.mt-3
             .meta-item
-                .meta-caption Headquarters
-                .meta-value Kazan, Russia
+                .meta-caption.text-muted Web-site
+                .meta-value.mt-1
+                    a(href="#") http://awesome.dev
             .meta-item
-                .meta-caption Founded
-                .meta-value 2012
+                .meta-caption.text-muted Headquarter
+                .meta-value.mt-1 Kazan, Russia
+            .meta-item
+                .meta-caption.text-muted Founded
+                .meta-value.mt-1 2012
 
 block main
     .description
@@ -47,4 +51,3 @@ block main
         p.text-muted Joined at 2017.08.23
 
 block aside
-    p Social profiles
