@@ -8,12 +8,12 @@ html(lang='ru')
             link(rel='stylesheet' href='css/bootstrap.css')
             link(rel='stylesheet' href='css/styles.css')
     body
-        block page
+        block body
             .bg-hidev
                 div.container
                     .row
                         nav.navbar.navbar-dark.navbar-expand-lg
-                            a.navbar-brand.brand-small(href="layout.html") hidev.io
+                            a.navbar-brand.brand-small(href="index.html") hidev.io
                             .collapse.navbar-collapse
                                 ul.navbar-nav
                                     li.nav-item
@@ -25,55 +25,40 @@ html(lang='ru')
 
             header
                 block header
-                    .container.clearfix
-                        .float-left
-                            h1 Scala Developer/Team-lead
-                            p.lead
-                                a(href="#") Awesome Corp,
-                                span.text-muted Russia, Moscow
 
-                        .meta.float-right
-                            .meta-item
-                                .meta-caption Salary
-                                .meta-value 1500-18000 USD
-                            .meta-item
-                                .meta-caption Job type
-                                .meta-value Full-time
-                            .meta-item
-                                .meta-caption Experience
-                            .meta-value 3-6 year
 
-            .container
-                .row
-                    .col-8
-                        main(role="main")
-                            block main
-                                .stack
-                                    span.stack-tech.badge.badge-info PHP7
-                                    span.stack-tech.badge.badge-info Symfony
-                                    span.stack-tech.badge.badge-info Doctrine
-                                    span.stack-tech.badge.badge-info Postgres
-                                    span.stack-tech.badge.badge-info Nginx
-                                    span.stack-tech.badge.badge-info Slack
-                                    span.stack-tech.badge.badge-info Jira
-                                    span.stack-tech.badge.badge-info Scrum/Agile
+            block page
+                .container
+                    .row
+                        .col-8
+                            main(role="main")
+                                block main
+                                    .stack
+                                        span.stack-tech.badge.badge-info PHP7
+                                        span.stack-tech.badge.badge-info Symfony
+                                        span.stack-tech.badge.badge-info Doctrine
+                                        span.stack-tech.badge.badge-info Postgres
+                                        span.stack-tech.badge.badge-info Nginx
+                                        span.stack-tech.badge.badge-info Slack
+                                        span.stack-tech.badge.badge-info Jira
+                                        span.stack-tech.badge.badge-info Scrum/Agile
 
-                                .description
-                                    h4 About this job
-                                    p Maecenas tristique dictum dui ut malesuada. Suspendisse a auctor lectus, non commodo nunc. Phasellus rhoncus a urna eget ultrices. Ut vulputate eros eu augue tincidunt semper. Cras a sapien magna. Pellentesque eu pretium massa, id elementum mi.
+                                    .description
+                                        h4 About this job
+                                        p Maecenas tristique dictum dui ut malesuada. Suspendisse a auctor lectus, non commodo nunc. Phasellus rhoncus a urna eget ultrices. Ut vulputate eros eu augue tincidunt semper. Cras a sapien magna. Pellentesque eu pretium massa, id elementum mi.
 
-                                    h4 Requirements
-                                    p Maecenas tristique dictum dui ut malesuada. Suspendisse a auctor lectus, non commodo nunc. Phasellus rhoncus a urna eget ultrices. Ut vulputate eros eu augue tincidunt semper. Cras a sapien magna. Pellentesque eu pretium massa, id elementum mi.
+                                        h4 Requirements
+                                        p Maecenas tristique dictum dui ut malesuada. Suspendisse a auctor lectus, non commodo nunc. Phasellus rhoncus a urna eget ultrices. Ut vulputate eros eu augue tincidunt semper. Cras a sapien magna. Pellentesque eu pretium massa, id elementum mi.
 
-                                    h4 Benefits
-                                    p Maecenas tristique dictum dui ut malesuada. Suspendisse a auctor lectus, non commodo nunc. Phasellus rhoncus a urna eget ultrices. Ut vulputate eros eu augue tincidunt semper. Cras a sapien magna. Pellentesque eu pretium massa, id elementum mi.
+                                        h4 Benefits
+                                        p Maecenas tristique dictum dui ut malesuada. Suspendisse a auctor lectus, non commodo nunc. Phasellus rhoncus a urna eget ultrices. Ut vulputate eros eu augue tincidunt semper. Cras a sapien magna. Pellentesque eu pretium massa, id elementum mi.
 
-                                .extra
-                                    p.text-muted Posted: 2017.08.23 15.00
-                    .col-4
-                        aside
-                            block aside
-                                button.btn.btn-success.btn-block Apply now
+                                    .extra
+                                        p.text-muted Posted: 2017.08.23 15.00
+                        .col-4
+                            aside
+                                block aside
+                                    button.btn.btn-success.btn-block Apply now
 
 
 

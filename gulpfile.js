@@ -57,7 +57,7 @@ gulp.task('server', function() {
             livereload: true,
             path: '/',
             port: 8099,
-            fallback: 'layout.html'
+            fallback: 'index.html'
         }));
 });
 
