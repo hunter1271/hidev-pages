@@ -1,36 +1,36 @@
 extends layout
 
 block header
-    .container.clearfix.mt-4.mb-2
-        .masthead.float-left
-            h1 Scala Developer/Team-lead
-            p.lead.mt-3
-                a.mr-5(href="#") Awesome Corp
-                span.text-muted Russia, Moscow
-
-        .meta.float-right.mt-3
-            .meta-item
-                .meta-caption.text-muted Salary
-                .meta-value.mt-1 1500-18000 USD
-            .meta-item
-                .meta-caption.text-muted Job type
-                .meta-value.mt-1 FULLTIME
-            .meta-item
-                .meta-caption.text-muted Experience
-                .meta-value.mt-1 3-6 year
+    .jumbotron.pb-1.pt-3.pt-5
+        .container
+            .row
+                .col-md-8
+                    h1 Scala Developer/Team-lead for serious challanges
+                    .mt-3.clearfix
+                        p.float-md-left
+                            span.mr-5 90-160K $
+                                span.text-muted.ml-1 Gross
+                            a(href="#") Awesome Corp
+                            span.text-muted.pl-2.pr-2 &ndash;
+                            span.text-muted Russia, Moscow
+                .col-md-4
+                    .btn-group.d-block.pt-1(role=group)
+                        a(href="#").btn.btn-outline-primary.btn-block Apply
 
 block main
-    .stack.mt-2
-        span.stack-tech.badge.badge-info PHP7
-        span.stack-tech.badge.badge-info Symfony
-        span.stack-tech.badge.badge-info Doctrine
-        span.stack-tech.badge.badge-info Postgres
-        span.stack-tech.badge.badge-info Nginx
-        span.stack-tech.badge.badge-info Slack
-        span.stack-tech.badge.badge-info Jira
-        span.stack-tech.badge.badge-info Scrum/Agile
+    p.mb-0
+        strong Stack
+    .lead.text-lowercase
+        span.mr-1.badge.badge-secondary PHP7
+        span.mr-1.badge.badge-secondary Symfony
+        span.mr-1.badge.badge-secondary Doctrine
+        span.mr-1.badge.badge-secondary Postgres
+        span.mr-1.badge.badge-secondary Nginx
+        span.mr-1.badge.badge-secondary Slack
+        span.mr-1.badge.badge-secondary Jira
+        span.mr-1.badge.badge-secondary Scrum/Agile
 
-    .description.mt-2
+    .description.mt-2.mr-1
         h4 About this job
         p Maecenas tristique dictum dui ut malesuada. Suspendisse a auctor lectus, non commodo nunc. Phasellus rhoncus a urna eget ultrices. Ut vulputate eros eu augue tincidunt semper. Cras a sapien magna. Pellentesque eu pretium massa, id elementum mi.
 
@@ -40,10 +40,16 @@ block main
         h4 Benefits
         p Maecenas tristique dictum dui ut malesuada. Suspendisse a auctor lectus, non commodo nunc. Phasellus rhoncus a urna eget ultrices. Ut vulputate eros eu augue tincidunt semper. Cras a sapien magna. Pellentesque eu pretium massa, id elementum mi.
 
-    .extra
-        p.text-muted Published at 2017.08.23 15.00
 
 
 block aside
-    button.btn.btn-success.btn-block Apply now
+    dl.metadata
+        dt.float-left.pr-2 Job Type:
+        dl.clearfix Permanent
+        dt.float-left.pr-2 Required experience:
+        dl.clearfix 3-6 year
+        dt.float-left.pr-2 Company type:
+        dl.clearfix Private
+        dt.float-left.pr-2.text-muted Posted at:
+        dl.clearfix.text-muted 3 days ago
 
