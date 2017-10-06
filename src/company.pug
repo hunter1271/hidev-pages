@@ -1,33 +1,27 @@
 extends layout
 
 block header
-    .container.clearfix.clearfix.mt-4.mb-2
-        .masthead.float-left
-            h1 AWS Solutions Inc.
-            p.lead.mt-3.text-muted Most popular cloud computing in the world
+    .jumbotron.pb-1.pt-3.pt-5
+        .container
+            .row
+                .col-md-8
+                    h1 AWS Solutions Inc.
+                    .mt-3.clearfix
+                        p.float-md-left Most popular cloud computing in the world
 
-
-        .meta.float-right.mt-3
-            .meta-item
-                .meta-caption.text-muted Web-site
-                .meta-value.mt-1
-                    a(href="#") http://awesome.dev
-            .meta-item
-                .meta-caption.text-muted Headquarter
-                .meta-value.mt-1 Kazan, Russia
-            .meta-item
-                .meta-caption.text-muted Founded
-                .meta-value.mt-1 2012
 
 block main
-    .description
-        h4 Jobs
-        .jobs
+    .mr-1
+        h6
+            strong Active jobs
+        .mt-3
             a(href="job.html").card.mb-2
                 .card-body
                     .float-left
                         h5.card-title PHP Developer
-                        h6.card-subtitle.text-muted Kazan, Russia
+                        .card-subtitle
+                            span.mr-5 90-160K $
+                            span.text-secondary Kazan, Russia
                     .float-right
                         span.card-subtitle.text-muted FULLTIME
             a(href="job.html").card.mb-2
@@ -46,8 +40,15 @@ block main
                         span.card-subtitle.text-muted FULLTIME
 
 
-
-    .extra
-        p.text-muted Joined at 2017.08.23
-
 block aside
+    dl.metadata
+        dt.float-left.pr-2 Web-site:
+        dl.clearfix http://awesomdev.com
+        dt.float-left.pr-2 Email:
+        dl.clearfix contact@awesomdev.com
+        dt.float-left.pr-2 Headquarter:
+        dl.clearfix Kazan, Russia
+        dt.float-left.pr-2 Company type:
+        dl.clearfix Private
+        dt.float-left.pr-2.text-muted Joined:
+        dl.clearfix.text-muted 3 days ago
