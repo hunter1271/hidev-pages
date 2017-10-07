@@ -3,10 +3,87 @@ extends layout
 block header
     .jumbotron.pb-1.pt-3.pt-5
         .container
-            h1 Find jobs
-            ol.breadcrumb.pl-0.mb-0
-                li.breadcrumb-item
-                    a(href="index.html") Home
-                li.breadcrumb-item.active Find jobs
+            .row
+                .col-md-8
+                    h1 Find jobs
+                    .mt-3.clearfix
+                        p.float-md-left.text-secondary There are 102 active jobs
+                .col-md-4
+                    .btn-group.d-block.pt-1(role=group)
+                        a(href="#").btn.btn-outline-primary.btn-block Post a job
 
-block page
+
+block main
+    .clearfix
+        a(href="job.html").card.mb-2
+            .card-body
+                .float-left
+                    h5.card-title Database Engineer
+                    .mt-1
+                        span.text-secondary Lambda Inc
+                        span.text-secondary.pl-1.pr-1 &ndash;
+                        span.text-secondary Kazan, Russia
+                        span.ml-4.text-secondary Fulltime
+                .float-right
+                    span.card-subtitle.text-secondary 155-200K Rub.
+        a(href="job.html").card.mb-2
+            .card-body
+                .float-left
+                    h5.card-title PHP Developer
+                    .mt-1
+                        span.text-secondary InnoData
+                        span.text-secondary.pl-2.pr-2 &ndash;
+                        span.text-secondary Innopolis, Russia
+                        span.ml-4.text-secondary Fulltime
+                .float-right
+                    span.card-subtitle.text-secondary 110K $
+        a(href="job.html").card.mb-2
+            .card-body
+                .float-left
+                    h5.card-title Database Engineer
+                    h6.card-subtitle.text-muted Remote
+                .float-right
+                    span.card-subtitle.text-muted FULLTIME
+        a(href="job.html").card.mb-2
+            .card-body
+                .float-left
+                    h5.card-title PHP Developer
+                    h6.card-subtitle.text-muted Berlin, Germany
+                .float-right
+                    span.card-subtitle.text-muted FULLTIME
+        a(href="job.html").card.mb-2
+            .card-body
+                .float-left
+                    h5.card-title Database Engineer
+                    h6.card-subtitle.text-muted Remote
+                .float-right
+                    span.card-subtitle.text-muted FULLTIME
+        a(href="job.html").card.mb-2
+            .card-body
+                .float-left
+                    h5.card-title PHP Developer
+                    h6.card-subtitle.text-muted Berlin, Germany
+                .float-right
+                    span.card-subtitle.text-muted FULLTIME
+
+    nav.mt-4.mb-3
+        ul.pagination
+            li.page-item
+                a.page-link
+                    span(aria-hidden="true") &laquo;
+                    span.sr-only Previous
+            li.page-item.active
+                span.page-link 1
+                span.sr-only (current)
+            li.page-item
+                a(href="#").page-link 2
+            li.page-item
+                a(href="#").page-link 3
+            li.page-item
+                a(href="#").page-link 4
+            li.page-item
+                a.page-link
+                    span(aria-hidden="true") &raquo;
+                    span.sr-only Next
+
+block aside
