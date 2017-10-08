@@ -1,5 +1,7 @@
 extends layout
 
+include ./mixin/company_card
+
 block header
     .jumbotron.pb-1.pt-3.pt-5
         .container
@@ -10,6 +12,35 @@ block header
                         p.float-md-left.text-secondary There are 102 companies
                 .col-md-4
                     .btn-group.d-block.pt-1(role=group)
-                        a(href="#").btn.btn-outline-primary.btn-block Add your company
+                        a(href="#").btn.btn-outline-primary.btn-block Register employer
 
-block page
+block main
+    .clearfix
+        +company_card("Universal Space", 3)
+        +company_card("Yarn", 8)
+        +company_card("Cognitive development universe", 322)
+        +company_card("Hot pizza deliver", 1)
+        +company_card("Universal Space", 3)
+
+    nav.mt-5.mb-3
+        ul.pagination
+            li.page-item
+                a.page-link
+                    span(aria-hidden="true") &laquo;
+                    span.sr-only Previous
+            li.page-item.active
+                span.page-link 1
+                span.sr-only (current)
+            li.page-item
+                a(href="#").page-link 2
+            li.page-item
+                a(href="#").page-link 3
+            li.page-item
+                a(href="#").page-link 4
+            li.page-item
+                a.page-link
+                    span(aria-hidden="true") &raquo;
+                    span.sr-only Next
+
+block aside
+

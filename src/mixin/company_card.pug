@@ -1,0 +1,8 @@
+mixin company_card(name, jobs)
+    a(href="company.html").card.mb-2
+        .card-body
+            h5.card-title.mb-0.clearfix
+                span.float-left= name
+                span.float-right.text-secondary
+                    small #{jobs} jobs
+

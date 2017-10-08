@@ -9,7 +9,7 @@ var gulp = require('gulp'),
 
 var sources = {
     bootstrap: ['node_modules/bootstrap/dist/css/*.css'],
-    views: ['src/*.pug'],
+    views: ['src/*.pug', 'src/*/*.pug'],
     scss: ['src/scss/*.scss', 'src/scss/block/*.scss'],
 };
 

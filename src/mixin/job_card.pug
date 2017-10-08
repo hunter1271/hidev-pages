@@ -1,0 +1,21 @@
+mixin job_card(position, company, location, salary, employment)
+    a(href="job.html").card.card-job.mb-2
+        .card-body
+            h5.card-title.clearfix
+                span.float-left= position
+                span.float-right.text-secondary
+                    small= salary
+            p.card-text
+                if company
+                    span.text-secondary= company
+                    span.text-secondary.pl-1.pr-1 &ndash;
+                span.text-secondary= location
+                span.ml-4.text-secondary= employment
+
+mixin job_card_front(position, company, location, salary, employment)
+    +job_card(position, company, location, salary, employment)
+
+mixin job_card_company(position, location, salary, employment)
+    +job_card(position, false, location, salary, employment)
+
+

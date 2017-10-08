@@ -1,5 +1,7 @@
 extends layout
 
+include ./mixin/job_card
+
 block header
     .jumbotron.pb-1.pt-3.pt-5
         .container
@@ -15,29 +17,10 @@ block main
         h6
             strong Active jobs
         .mt-3
-            a(href="job.html").card.mb-2
-                .card-body
-                    .float-left
-                        h5.card-title PHP Developer
-                        .card-subtitle
-                            span.mr-5 90-160K $
-                            span.text-secondary Kazan, Russia
-                    .float-right
-                        span.card-subtitle.text-muted FULLTIME
-            a(href="job.html").card.mb-2
-                .card-body
-                    .float-left
-                        h5.card-title Database Engineer
-                        h6.card-subtitle.text-muted Remote
-                    .float-right
-                        span.card-subtitle.text-muted FULLTIME
-            a(href="job.html").card.mb-2
-                .card-body
-                    .float-left
-                        h5.card-title PHP Developer
-                        h6.card-subtitle.text-muted Berlin, Germany
-                    .float-right
-                        span.card-subtitle.text-muted FULLTIME
+            +job_card_company("Java developer", "Kazan, Russia", "90K - 160K $", "Fulltime")
+            +job_card_company("Database Engineer", "Remote", "99K $", "Fulltime")
+            +job_card_company("Backend developer", "Kazan, Russia", "90K - 160K $", "Fulltime")
+            +job_card_company("Full-stack developer", "Kazan, Russia", "90K - 160K $", "Fulltime")
 
 
 block aside

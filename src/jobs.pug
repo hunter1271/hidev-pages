@@ -1,5 +1,7 @@
 extends layout
 
+include ./mixin/job_card
+
 block header
     .jumbotron.pb-1.pt-3.pt-5
         .container
@@ -15,56 +17,11 @@ block header
 
 block main
     .clearfix
-        a(href="job.html").card.mb-2
-            .card-body
-                .float-left
-                    h5.card-title Database Engineer
-                    .mt-1
-                        span.text-secondary Lambda Inc
-                        span.text-secondary.pl-1.pr-1 &ndash;
-                        span.text-secondary Kazan, Russia
-                        span.ml-4.text-secondary Fulltime
-                .float-right
-                    span.card-subtitle.text-secondary 155-200K Rub.
-        a(href="job.html").card.mb-2
-            .card-body
-                .float-left
-                    h5.card-title PHP Developer
-                    .mt-1
-                        span.text-secondary InnoData
-                        span.text-secondary.pl-2.pr-2 &ndash;
-                        span.text-secondary Innopolis, Russia
-                        span.ml-4.text-secondary Fulltime
-                .float-right
-                    span.card-subtitle.text-secondary 110K $
-        a(href="job.html").card.mb-2
-            .card-body
-                .float-left
-                    h5.card-title Database Engineer
-                    h6.card-subtitle.text-muted Remote
-                .float-right
-                    span.card-subtitle.text-muted FULLTIME
-        a(href="job.html").card.mb-2
-            .card-body
-                .float-left
-                    h5.card-title PHP Developer
-                    h6.card-subtitle.text-muted Berlin, Germany
-                .float-right
-                    span.card-subtitle.text-muted FULLTIME
-        a(href="job.html").card.mb-2
-            .card-body
-                .float-left
-                    h5.card-title Database Engineer
-                    h6.card-subtitle.text-muted Remote
-                .float-right
-                    span.card-subtitle.text-muted FULLTIME
-        a(href="job.html").card.mb-2
-            .card-body
-                .float-left
-                    h5.card-title PHP Developer
-                    h6.card-subtitle.text-muted Berlin, Germany
-                .float-right
-                    span.card-subtitle.text-muted FULLTIME
+        +job_card("Database Engineer", "KROK", "Moscow, Russia", "155-200K Rub.", "Fulltime")
+        +job_card("Senior Scala Developer/Teamled", "InnoData", "Innopolis, Russia", "110K $", "Fulltime")
+        +job_card("Frontend Developer", "Global Universe", "Berlin, Germany", "155-200K Rub.", "Fulltime")
+        +job_card("Q/A Engineer", "Cognitive Technologies", "CA, USA", "80K - 100K $", "Fulltime")
+        +job_card("Business Analyst", "Teamwork Ltd.", "Remote only", "20K $", "Parttime")
 
     nav.mt-4.mb-3
         ul.pagination

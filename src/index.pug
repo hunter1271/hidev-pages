@@ -1,5 +1,7 @@
 extends layout
 
+include ./mixin/job_card
+
 block header
     .jumbotron
         .container
@@ -16,67 +18,20 @@ block page
                 h5.text-uppercase Latest jobs
         .row.mb-2
             .col
-                a(href="job.html").card
-                    .card-body
-                        .float-left
-                            h5.card-title PHP Developer
-                            .card-subtitle
-                                    span.text-muted.mr-4 Lambda Inc
-                                    span.text-muted Kazan, Russia
-                        .float-right
-                            span.card-subtitle.text-muted FULLTIME
+                +job_card_front("PHP Developer", "Lambda Inc", "Kazan, Russia", "5000 $", "Fulltime")
             .col
-                a(href="job.html").card.mb-2
-                    .card-body
-                        .float-left
-                            h5.card-title Database Engineer
-                            .card-subtitle
-                                span.text-muted.mr-4 Cognitive Technologies
-                                span.text-muted Remote
-                        .float-right
-                            span.card-subtitle.text-muted FULLTIME
+                +job_card_front("Database Engineer", "Cognitive Technologies", "Remote", "80K-120K Rub.", "Fulltime")
         .row.mb-2
             .col
-                a(href="job.html").card
-                    .card-body
-                        .float-left
-                            h5.card-title Head HR Generalist
-                            .card-subtitle
-                                span.text-muted.mr-4 Young
-                                span.text-muted Tomsk, Russia
-                        .float-right
-                            span.card-subtitle.text-muted FULLTIME
+                +job_card_front("Sales manager", "Universal Design Partners", "Moscow, Russia", "60K-200K Rub.", "Fulltime")
             .col
-                a(href="job.html").card.mb-2
-                    .card-body
-                        .float-left
-                            h5.card-title Sales manager
-                            .card-subtitle
-                                span.text-muted.mr-4 Universal Design Partners
-                                span.text-muted Moscow, Russia
-                        .float-right
-                            span.card-subtitle.text-muted FULLTIME
+                +job_card_front("HEAD HR Generalist", "Universal Design Partners", "Moscow, Russia", "60K-200K Rub.", "Fulltime")
         .row.mb-2
             .col
-                a(href="job.html").card
-                    .card-body
-                        .float-left
-                            h5.card-title Head HR Generalist
-                            .card-subtitle
-                                span.text-muted.mr-4 Showbiz Pizza Place
-                                span.text-muted CA, USA
-                        .float-right
-                            span.card-subtitle.text-muted FULLTIME
+                +job_card_front("Frontend developer", "Showbiz Pizza Place", "CA, USA", "100K Rub.", "Fulltime")
             .col
-                a(href="job.html").card.mb-2
-                    .card-body
-                        .float-left
-                            h5.card-title Sales manager
-                            .card-subtitle
-                                span.text-muted.mr-4 Incredible Universe
-                                span.text-muted Manchester, United Kingdom
-                        .float-right
-                            span.card-subtitle.text-muted FULLTIME
+                +job_card_front("Sales manager", "Incredible Universe", "Manchester, United Kingdom", "56K EUR", "Fulltime")
+
     .container
         .row
             .col
