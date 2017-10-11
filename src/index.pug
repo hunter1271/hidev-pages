@@ -5,11 +5,17 @@ include ./mixin/job_card
 block header
     .jumbotron
         .container
-            h1 Job portal for IT companies
-            p.lead Publish required skills, share projects and build communications
-            p.lead
-                button.btn.btn-primary Sign up
-                button.btn.btn-secondary Read more...
+            .row
+                .col.col-md-8
+                    h1 Job portal for IT companies
+                    p.lead Publish required skills, share projects and build communications
+                    p.lead
+                        button.btn.btn-primary Sign up
+                        button.btn.btn-secondary Read more...
+                .col.col-md-4
+                    .card
+                        .card-body
+                            p Sign in form
 
 block page
     .container
