@@ -1,0 +1,25 @@
+extends layout
+
+block body
+    .container
+        .row.justify-content-center
+            .col-5
+                .card.mt-5
+                    .card-body
+                        h4.card-title Create Account with email
+                        form
+                            .form-group
+                                label(for="user_email").sr-only Email
+                                input(type="email" placeholder='Enter email').form-control#user_email
+
+                            .form-group
+                                small.form-text.text-secondary By creating an account, I agree to Term of use.
+
+                            button(type="submit").btn.btn-primary.btn-block Sign up
+
+                .card.text-center.mt-3
+                    .card-body
+                        p.card-text
+                            span.text-secondary.mr-3 Already have an account?
+                            a(href="signin.html") Sign in
+
