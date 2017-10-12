@@ -1,4 +1,27 @@
 extends layout
 
 block body
-    h3 LOgin form
+    .container
+        .row.justify-content-center
+            .col-5
+                .card.mt-5
+                    .card-body
+                        h4.card-title Please sign in
+                        form
+                            .form-group
+                                label(for="user_email").sr-only Email
+                                input(type="email" placeholder='Enter email').form-control#user_email
+                            .form-group
+                                label(for="user_password").sr-only Password
+                                input(type="password" placeholder="Password").form-control#user_password
+                            .clearfix
+                                button(type="submit").btn.btn-primary.float-left.pr-5.pl-5 Sign in
+                                a(href="#").btn.btn-link.float-right.pr-0 Forgot password?
+
+                .card.text-center.mt-3
+                    .card-body
+                        p.card-text
+                            span.text-secondary.mr-3 Don't have an account?
+                            a(href="#") Sign up
+
+
