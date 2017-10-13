@@ -7,10 +7,14 @@ block body
                 .card.mt-5
                     .card-body
                         h5.card-title Create Account with email
-                        form
+                        form(action="email-sent.html")
                             .form-group
                                 label(for="user_email").sr-only Email
                                 input(type="email" placeholder='Enter email').form-control#user_email
+
+                            .form-group
+                                label(for="user_password").sr-only Password
+                                input(type="password" placeholder='Password').form-control#user_password
 
                             .form-group
                                 small.form-text.text-secondary By creating an account, I agree to Term of use.
