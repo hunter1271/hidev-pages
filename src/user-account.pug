@@ -1,0 +1,36 @@
+extends layout
+
+block header
+
+block page
+    .container
+        .row
+            .col.col-md-3.pt-4
+                .list-group
+                    span.list-group-item.list-group-item-action.active Account
+                    a(href="#").list-group-item.list-group-item-action.disabled Settings
+                    a(href="#").list-group-item.list-group-item-action Flush
+            .col.col-md-9.pt-4
+                .card
+                    .card-body
+                        h4.card-title Account data
+                        hr
+                        p.card-text
+                            strong.mr-3 username@host.loc
+                            | -
+                            span.badge.badge-success.ml-3 Approved
+                .card.mt-4
+                    .card-body.pb-1
+                        h5.card-title.mb-3 Change password
+                        .form-group
+                            input(type="password" placeholder="Current password").form-control#current_password
+                        .form-group
+                            input(type="password" placeholder="New password").form-control#new_password
+                        .form-group
+                            input(type="password" placeholder="Repeat new password").form-control#repeat_new_password
+
+                    .card-body.pt-1.text-right
+                        button.btn.btn-primary Save changes
+
+
+
