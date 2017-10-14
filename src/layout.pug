@@ -11,7 +11,7 @@ html(lang='ru')
         block body
             .bg-hidev
                 div.container
-                        nav.nav.navbar.navbar-expand-lg.navbar-dark
+                        nav.nav.navbar.navbar-expand-lg.navbar-dark.pl-0.pr-0
                             a.navbar-brand.brand-small(href="index.html") hidev.io
                             .collapse.navbar-collapse
                                 ul.navbar-nav.mr-auto
@@ -19,11 +19,14 @@ html(lang='ru')
                                         a(href="jobs.html").nav-link.active Jobs
                                     li.nav-item
                                         a(href="companies.html").nav-link Companies
-                                    li.nav-item
-                                        a(href="#").nav-link Technologies
                                 ul.navbar-nav.my-2.my-lg-0
                                     li.nav-item.dropdown
-                                        a(href="#").nav-link User name
+                                        a(href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false").nav-item.nav-link.dropdown-toggle#user_actions User name
+                                        .dropdown-menu.dropdown-menu-right(aria-labelledby="user_actions")
+                                            a(href="#").dropdown-item My account
+                                            .dropdown-divider
+                                            a(href="#").dropdown-item Sign out
+
 
             header
                 block header
@@ -61,6 +64,9 @@ html(lang='ru')
                             aside
                                 block aside
                                     button.btn.btn-success.btn-block Apply now
+
+        block scripts
+            script(src='/js/scripts.js')
 
 
 
