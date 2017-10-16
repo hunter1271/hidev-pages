@@ -1,0 +1,39 @@
+extends layout-user
+
+block navbar
+    .list-group
+        a(href="#").list-group-item.list-group-item-action Jobs
+        a(href="#").list-group-item.list-group-item-action.active Company
+        a(href="user-account.html").list-group-item.list-group-item-action Account
+        a(href="#").list-group-item.list-group-item-action.disabled Flush
+
+block content
+    form.card.mb-3
+        .card-body
+            h4.card-title Company data
+            hr
+            .form-group
+                label(for="company_name") Company name
+                input(type="text" placeholder="Company name").form-control#company_name
+
+
+        .card-body.pt-1.text-right
+            button.btn.btn-primary Save changes
+
+    form.card
+        .card-body.container
+            .row
+                .col
+                    h5.card-title.mb-3.text-secondary Contact information
+            .row
+                .col
+                    .form-group
+                        label(for="company_phone") Phone
+                        input(type="text" placeholder="Phone").form-control#company_phone
+                .col
+                    .form-group
+                        label(for="company_phone") Email
+                        input(type="email" placeholder="Email").form-control#company_email
+            .row.pt-1
+                .col.text-right
+                    button.btn.btn-primary Save changes

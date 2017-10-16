@@ -1,0 +1,18 @@
+extends layout
+
+block header
+
+block page
+    .container
+        .row
+            .col.col-md-3.pt-4
+                block navbar
+                    .list-group
+                        a(href="#").list-group-item.list-group-item-action Jobs
+                        span.list-group-item.list-group-item-action.active Account
+                        a(href="#").list-group-item.list-group-item-action.disabled Flush
+            .col.col-md-9.pt-4
+                block content
+
+
+
