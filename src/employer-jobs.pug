@@ -1,0 +1,36 @@
+extends layout-user
+
+block navbar
+    .list-group
+        a(href="employer-jobs.html").list-group-item.list-group-item-action.active Jobs
+        a(href="employer-profile.html").list-group-item.list-group-item-action Employer profile
+        a(href="user-account.html").list-group-item.list-group-item-action Account
+        a(href="#").list-group-item.list-group-item-action.disabled Flush
+
+block content
+        ul.nav.nav-tabs
+            li.nav-item
+                a(href="#").nav-link.active Active
+            li.nav-item
+                a(href="#").nav-link Archive
+
+        table.table.table-striped
+            thead
+                tr
+                    th ID
+                    th Job
+                    th Status
+                    th Applications
+            tbody
+                tr
+                    td 1
+                    td Java developer
+                        small.d-block Senior Java developer
+                    td Active
+                    td
+                tr
+                    td 2
+                    td Salesman
+                        small.d-block Sales for prod
+                    td Active
+                    td
