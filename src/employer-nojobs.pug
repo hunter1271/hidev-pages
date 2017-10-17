@@ -1,0 +1,23 @@
+extends layout-user
+
+block navbar
+    .list-group
+        a(href="employer-jobs.html").list-group-item.list-group-item-action.active Jobs
+        a(href="employer-profile.html").list-group-item.list-group-item-action Employer profile
+        a(href="user-account.html").list-group-item.list-group-item-action Account
+        a(href="#").list-group-item.list-group-item-action.disabled Flush
+
+block content
+    .card
+        .card-header
+           ul.nav.nav-tabs.card-header-tabs
+               li.nav-item
+                   a(href="#").nav-link.active Active
+               li.nav-item.mr-auto
+                   a(href="#").nav-link.disabled Archive
+               li.nav-item
+                   a(href="#").btn.btn-outline-primary Create job
+        .card-body.text-center
+            h4.card-title There are no active jobs
+            p.card-text Create new job a start hiring flow
+            a(href="#").btn.btn-primary Create new Job
