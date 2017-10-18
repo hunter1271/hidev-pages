@@ -1,66 +1,56 @@
-extends layout-user
+extends layout-employer
 
-block navbar
-    .list-group
-        a(href="employer-jobs.html").list-group-item.list-group-item-action.active Jobs
-        a(href="employer-profile.html").list-group-item.list-group-item-action Employer profile
-        a(href="user-account.html").list-group-item.list-group-item-action Account
-        a(href="#").list-group-item.list-group-item-action.disabled Flush
+block tabs
+    ul.nav.nav-tabs.card-header-tabs
+        li.nav-item
+            a(href="#").nav-link.active Active
+        li.nav-item.mr-auto
+            a(href="employer-nojobs.html").nav-link.disabled Archive
+        li.nav-item
+            a(href="#").btn.btn-outline-primary Create job
 
-block content
-    .card
-        .card-header
-            ul.nav.nav-tabs.card-header-tabs
-                li.nav-item
-                    a(href="#").nav-link.active Active
-                li.nav-item.mr-auto
-                    a(href="#").nav-link.disabled Archive
-                li.nav-item
-                    a(href="#").btn.btn-outline-primary Create job
-        .card-body.pl-0.pr-0
-            table.table.table-striped
-                thead
-                    tr
-                        th ID
-                        th Job
-                        th Status
-                        th Applications
-                tbody
-                    tr
-                        td 1
-                        td Java developer
-                            small.d-block Senior Java developer
-                        td Active
-                        td
-                    tr
-                        td 2
-                        td Salesman
-                            small.d-block Sales for prod
-                        td Active
-                        td
-                    tr
-                        td 1
-                        td Java developer
-                            small.d-block Senior Java developer
-                        td Active
-                        td
-                    tr
-                        td 2
-                        td Salesman
-                            small.d-block Sales for prod
-                        td Active
-                        td
-                    tr
-                        td 1
-                        td Java developer
-                            small.d-block Senior Java developer
-                        td Active
-                        td
-                    tr
-                        td 2
-                        td Salesman
-                            small.d-block Sales for prod
-                        td Active
-                        td
-
-
+block form
+    table.table.table-striped
+        thead
+            tr
+                th ID
+                th Job
+                th Status
+                th Applications
+        tbody
+            tr
+                td 1
+                td Java developer
+                    small.d-block Senior Java developer
+                td Active
+                td
+            tr
+                td 2
+                td Salesman
+                    small.d-block Sales for prod
+                td Active
+                td
+            tr
+                td 1
+                td Java developer
+                    small.d-block Senior Java developer
+                td Active
+                td
+            tr
+                td 2
+                td Salesman
+                    small.d-block Sales for prod
+                td Active
+                td
+            tr
+                td 1
+                td Java developer
+                    small.d-block Senior Java developer
+                td Active
+                td
+            tr
+                td 2
+                td Salesman
+                    small.d-block Sales for prod
+                td Active
+                td

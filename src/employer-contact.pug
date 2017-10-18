@@ -1,0 +1,32 @@
+extends layout-employer
+
+block tabs
+    ul.nav.nav-tabs.card-header-tabs
+        li.nav-item
+            a(href="employer-profile.html").nav-link Profile
+        li.nav-item
+            a(href="employer-contact.html").nav-link.active Contact
+
+block form
+    .container
+        .row
+            .col
+                .form-group
+                    label(for="person_first_name") First name
+                    input(type="text" placeholder="John").form-control#person_first_name
+                .form-group
+                    label(for="person_last_name") Last name
+                    input(type="text" placeholder="Doe").form-control#person_last_name
+                .form-group
+                    label(for="person_position") Position
+                    input(type="email" placeholder="HR manager").form-control#person_position
+            .col
+                .form-group
+                    label(for="person_phone") Phone
+                    input(type="text" placeholder="Phone").form-control#person_phone
+                .form-group
+                    label(for="person_email") Email
+                    input(type="email" placeholder="Email").form-control#person_email
+        .row.pt-1
+            .col.text-right
+                button.btn.btn-primary Save changes

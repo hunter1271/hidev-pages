@@ -1,82 +1,54 @@
-extends layout-user
+extends layout-employer
 
-block navbar
-    .list-group
-        a(href="employer-jobs.html").list-group-item.list-group-item-action Jobs
-        a(href="employer-profile.html").list-group-item.list-group-item-action.active Employer profile
-        a(href="user-account.html").list-group-item.list-group-item-action Account
-        a(href="#").list-group-item.list-group-item-action.disabled Flush
+block tabs
+    ul.nav.nav-tabs.card-header-tabs
+        li.nav-item
+            a(href="employer-profile.html").nav-link.active Profile
+        li.nav-item
+            a(href="employer-contact.html").nav-link Contact
 
-block content
-    form.card.mb-3
-        .card-body.container
-            .row
-                .col
-                    h4.card-title Employer profile
-                    hr
-            .row
-                .col
-                    .form-group
-                        label(for="company_name") Company name:
-                        input(type="text" placeholder="Example Corp.").form-control#company_name
+block form
+    .container
+        .row
+            .col
+                .form-group
+                    label(for="company_name") Company name:
+                    input(type="text" placeholder="Example Corp.").form-control#company_name
 
-                    .form-group
-                        label(for="company_location") Headquarter:
-                        input(type="text" placeholder="Innopolis, Russia" aria-labelledby="company_location_help").form-control#company_location
-                        small#company_location_help.form-text.text-muted Company head office location
-            .row
-                .col
-                    .form-group
-                        label(for="company_size") Size:
-                        select.form-control#company_size
-                            option Select stuff count
-                            option 1-10
-                            option 10-50
-                            option 50-100
-                            option 100-1000
-                            option 1000+
-                    .form-group
-                        label(for="company_type") Company type:
-                        select.form-control#company_type
-                            option Private
-                            option Public
-                            option Other
-                .col
-                    .form-group
-                        label(for="company_website") Web-site:
-                        input(type="text" placeholder="http://example.com").form-control#company_website
-                    .form-group
-                        label(for="company_email") E-mail:
-                        input(type="text" placeholder="info@example.com").form-control#company_email
-                        small#company_email_help.form-text.text-muted Public e-mail. Don't use your account email here!
+                .form-group
+                    label(for="company_location") Headquarter:
+                    input(type="text" placeholder="Innopolis, Russia" aria-labelledby="company_location_help").form-control#company_location
+                    small#company_location_help.form-text.text-muted Company head office location
+        .row
+            .col
+                .form-group
+                    label(for="company_size") Size:
+                    select.form-control#company_size
+                        option Select stuff count
+                        option 1-10
+                        option 10-50
+                        option 50-100
+                        option 100-1000
+                        option 1000+
+                .form-group
+                    label(for="company_type") Company type:
+                    select.form-control#company_type
+                        option Private
+                        option Public
+                        option Other
+            .col
+                .form-group
+                    label(for="company_website") Web-site:
+                    input(type="text" placeholder="http://example.com").form-control#company_website
+                .form-group
+                    label(for="company_email") E-mail:
+                    input(type="text" placeholder="info@example.com").form-control#company_email
+                    small#company_email_help.form-text.text-muted Public e-mail. Don't use your account email here!
 
-            .row
-                .col.text-right
-                    button.btn.btn-primary Save changes
+        .row
+            .col.text-right
+                button.btn.btn-primary Save changes
 
-    form.card
-        .card-body.container
-            .row
-                .col
-                    h5.card-title.mb-3.text-secondary Contact person
-            .row
-                .col
-                    .form-group
-                        label(for="person_first_name") First name
-                        input(type="text" placeholder="John").form-control#person_first_name
-                    .form-group
-                        label(for="person_last_name") Last name
-                        input(type="text" placeholder="Doe").form-control#person_last_name
-                    .form-group
-                        label(for="person_position") Position
-                        input(type="email" placeholder="HR manager").form-control#person_position
-                .col
-                    .form-group
-                        label(for="person_phone") Phone
-                        input(type="text" placeholder="Phone").form-control#person_phone
-                    .form-group
-                        label(for="person_email") Email
-                        input(type="email" placeholder="Email").form-control#person_email
-            .row.pt-1
-                .col.text-right
-                    button.btn.btn-primary Save changes
+
+
+

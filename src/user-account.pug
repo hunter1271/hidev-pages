@@ -1,27 +1,16 @@
 extends layout-user
 
-block content
-    .card
-        .card-body
-            h4.card-title Account data
-            hr
-            p.card-text
-                strong.mr-3 username@host.loc
-                | -
-                span.badge.badge-success.ml-3 Approved
-    .card.mt-4
-        .card-body.pb-1
-            h5.card-title.mb-3 Change password
-            .form-group
-                input(type="password" placeholder="Current password").form-control#current_password
-            .form-group
-                input(type="password" placeholder="New password").form-control#new_password
-            .form-group
-                input(type="password" placeholder="Repeat new password").form-control#repeat_new_password
-
-        .card-body.pt-1.text-right
-            button.btn.btn-primary Save changes
-
-
-
-
+block tabs
+    ul.nav.nav-tabs.card-header-tabs
+        li.nav-item
+            a(href="user-account.html").nav-link.active Account
+        li.nav-item
+            a(href="user-password.html").nav-link Password
+block form
+    .container
+        .row
+            .col
+                p.card-text
+                    strong.mr-3 username@host.loc
+                    | -
+                    span.badge.badge-success.ml-3 Approved
