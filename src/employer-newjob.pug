@@ -4,7 +4,7 @@ block tabs
     | Create new job
 
 block form
-    .container
+    form(action="#").container
         .row
             .col
                 .form-group
@@ -23,3 +23,6 @@ block form
                     label(for="job_location") Location:
                     input(type="text" placeholder="Location" aria-describedby="job_location_help").form-control#job_location
                     small#job_location_help.form-text.text-muted Start typing office location
+        .row
+            .col.text-center
+                button.btn.btn-primary Create job
