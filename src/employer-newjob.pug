@@ -8,8 +8,8 @@ block form
         .row
             .col
                 .form-group
-                    label(for="job_name") Job name:
-                    input(type="text" placeholder="Job name").form-control#job_name
+                    label(for="job_name") Position
+                    input(type="text" placeholder="Software developer").form-control#job_name
         .row
             .col-3
                 .form-group
@@ -20,9 +20,23 @@ block form
                         option Only remote
             .col-9
                 .form-group
-                    label(for="job_location") Location:
-                    input(type="text" placeholder="Location" aria-describedby="job_location_help").form-control#job_location
+                    label(for="job_location") Location
+                    input(type="text" placeholder="Innopolis, Russia" aria-describedby="job_location_help").form-control#job_location
                     small#job_location_help.form-text.text-muted Start typing office location
         .row
-            .col.text-center
-                button.btn.btn-primary Create job
+            .col
+                .form-group
+                    label Salary
+                    .input-group
+
+
+        .row
+            .col
+                .form-group
+                    label(for="job_stack") Stack
+                    input(type="text" placeholder="python, postgres etc." aria-describedby="job_stack_help").form-control#job_stack
+                    small#job_stack_help.form-text.text-muted Select tool and technologies actual for this position
+        .row
+            .col.text-right
+                button.btn.btn-outline-primary Save as draft
+                button.btn.btn-primary Save & Publish
