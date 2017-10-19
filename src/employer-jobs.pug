@@ -7,14 +7,22 @@ block tabs
         li.nav-item.mr-auto
             a(href="employer-nojobs.html").nav-link.disabled Archive
         li.nav-item
-            a(href="#").btn.btn-outline-primary Create job
+            a(href="employer-newjob.html").btn.btn-outline-primary Create job
 
 block form
-    table.table.table-striped
+    table.table.table-hover
         tbody
             tr
+                td
+                    a(href="#") Java developer
+                td Active
+                td
+            tr
+                td Salesman
+                td Active
+                td
+            tr
                 td Java developer
-                    small.d-block Senior Java developer
                 td Active
                 td
             tr
@@ -32,17 +40,7 @@ block form
                     small.d-block Sales for prod
                 td Active
                 td
-            tr
-                td Java developer
-                    small.d-block Senior Java developer
-                td Active
-                td
-            tr
-                td Salesman
-                    small.d-block Sales for prod
-                td Active
-                td
-
+    hr
 
     ul.pagination.justify-content-center
         li.page-item

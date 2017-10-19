@@ -1,0 +1,25 @@
+extends layout-employer
+
+block tabs
+    | Create new job
+
+block form
+    .container
+        .row
+            .col
+                .form-group
+                    label(for="job_name") Job name:
+                    input(type="text" placeholder="Job name").form-control#job_name
+        .row
+            .col-3
+                .form-group
+                    label(for="job_placement") Placement
+                    select.form-control#job_placement
+                        option Office
+                        option Remote available
+                        option Only remote
+            .col-9
+                .form-group
+                    label(for="job_location") Location:
+                    input(type="text" placeholder="Location" aria-describedby="job_location_help").form-control#job_location
+                    small#job_location_help.form-text.text-muted Start typing office location
