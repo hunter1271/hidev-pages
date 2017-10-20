@@ -11,24 +11,54 @@ block form
                     label(for="job_name") Position
                     input(type="text" placeholder="Software developer").form-control#job_name
         .row
-            .col-3
+            .col
                 .form-group
                     label(for="job_placement") Placement
                     select.form-control#job_placement
                         option Office
                         option Remote available
                         option Only remote
-            .col-9
+            .col
+                .form-group
+                    label(for="job_type") Type
+                    select.form-control#job_type
+                        option Permanent
+                        option Project
+        .row
+            .col
                 .form-group
                     label(for="job_location") Location
                     input(type="text" placeholder="Innopolis, Russia" aria-describedby="job_location_help").form-control#job_location
                     small#job_location_help.form-text.text-muted Start typing office location
         .row
             .col
-                .form-group
-                    label Salary
-                    .input-group
-
+                .form-row
+                    .col
+                        label(for="job_salary_from") Salary
+                .form-row
+                    .col-auto
+                        .form-group
+                            input(type="text" placeholder="from").form-control#job_salary_from
+                    .col-auto
+                        .form-group
+                            input(type="text" placeholder="to").form-control#job_salary_to
+                    .col-auto
+                        .form-group
+                            select.form-control#job_salary_currency
+                                option USD
+                                option EUR
+                                option RUR
+                    .col-auto
+                        .form-group
+                            select.form-control#job_salary_period
+                                option per mount
+                                option per year
+                                option whole project
+                    .col
+                        .form-group
+                            select.form-control#job_salary_tax
+                                option gross
+                                option net
 
         .row
             .col
@@ -36,6 +66,12 @@ block form
                     label(for="job_stack") Stack
                     input(type="text" placeholder="python, postgres etc." aria-describedby="job_stack_help").form-control#job_stack
                     small#job_stack_help.form-text.text-muted Select tool and technologies actual for this position
+        .row
+            .col
+                .form-group
+                    label(for="job_description") Description
+                    textarea(placeholder="About the job").form-control#job_description
+                    small#job_description_help.form-text.text-muted Tell about your job
         .row
             .col.text-right
                 button.btn.btn-outline-primary Save as draft
