@@ -8,11 +8,18 @@ var gulp       = require('gulp'),
     pug        = require('gulp-pug');
 
 var sources = {
-    bootstrap: ['node_modules/bootstrap/dist/css/*.css'],
+    vendor_css: [
+        'node_modules/bootstrap/dist/css/*.css',
+        'node_modules/select2/dist/css/select2.min.css',
+        'node_modules/select2-bootstrap-theme/dist/select2-bootstrap.min.css'
+    ],
     vendor_js: [
         'node_modules/jquery/dist/jquery.min.js',
         'node_modules/popper.js/dist/umd/popper.min.js',
-        'node_modules/bootstrap/dist/js/bootstrap.js'
+        'node_modules/bootstrap/dist/js/bootstrap.js',
+        'node_modules/geocomplete/jquery.geocomplete.js',
+        'node_modules/select2/dist/js/select2.full.js',
+        'src/script/script.js',
     ],
     views: ['src/*.pug', 'src/*/*.pug'],
     scss: ['src/scss/*.scss', 'src/scss/block/*.scss']
@@ -24,10 +31,10 @@ var dest = {
     html: './build'
 };
 
-gulp.task('bootstrap_css', function() {
-    return gulp.src(sources.bootstrap)
+gulp.task('vendor_css', function() {
+    return gulp.src(sources.vendor_css)
         .pipe(sourcemaps.init())
-        .pipe(concat('bootstrap.css'))
+        .pipe(concat('vendor.css'))
         .pipe(sourcemaps.write())
         .pipe(gulp.dest(dest.css));
 });
@@ -75,5 +82,5 @@ gulp.task('server', function() {
         }));
 });
 
-gulp.task('build', ['bootstrap_css', 'views', 'scss', 'scripts', 'server', 'scss:watch', 'views:watch']);
+gulp.task('build', ['vendor_css', 'views', 'scss', 'scripts', 'server', 'scss:watch', 'views:watch']);
 gulp.task('default', ['build']);

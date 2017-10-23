@@ -64,7 +64,13 @@ block form
             .col
                 .form-group
                     label(for="job_stack") Stack
-                    input(type="text" placeholder="python, postgres etc." aria-describedby="job_stack_help").form-control#job_stack
+                    select(data-placeholder="agile/scrum, php7, symfony, postgres ..." multiple="true" aria-describedby="job_stack_help").form-control#job_stack
+                        option nginx
+                        option php
+                        option symfony
+                        option postgresql
+                        option es6
+                        option php7
                     small#job_stack_help.form-text.text-muted Select tool and technologies actual for this position
         .row
             .col
