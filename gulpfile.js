@@ -5,13 +5,11 @@ var gulp       = require('gulp'),
     concat     = require('gulp-concat'),
     sourcemaps = require('gulp-sourcemaps'),
     webserver  = require('gulp-webserver'),
-    pug        = require('gulp-pug');
+    pug        = require('gulp-pug'),
+    cleanCSS = require('gulp-clean-css');
 
 var sources = {
     vendor_css: [
-        'node_modules/bootstrap/dist/css/*.css',
-        'node_modules/select2/dist/css/select2.min.css',
-        'node_modules/select2-bootstrap-theme/dist/select2-bootstrap.min.css'
     ],
     vendor_js: [
         'node_modules/jquery/dist/jquery.min.js',
@@ -22,7 +20,7 @@ var sources = {
         'src/script/script.js',
     ],
     views: ['src/*.pug', 'src/*/*.pug'],
-    scss: ['src/scss/*.scss', 'src/scss/block/*.scss']
+    scss: 'src/scss/styles.scss',
 };
 
 var dest = {
@@ -30,14 +28,6 @@ var dest = {
     js: './build/js',
     html: './build'
 };
-
-gulp.task('vendor_css', function() {
-    return gulp.src(sources.vendor_css)
-        .pipe(sourcemaps.init())
-        .pipe(concat('vendor.css'))
-        .pipe(sourcemaps.write())
-        .pipe(gulp.dest(dest.css));
-});
 
 gulp.task('scripts', function () {
     return gulp.src(sources.vendor_js)
@@ -61,10 +51,10 @@ gulp.task('views:watch', function () {
 
 gulp.task('scss', function (){
     return gulp.src(sources.scss)
-        .pipe(sourcemaps.init())
+        //.pipe(sourcemaps.init())
         .pipe(scss().on('error', scss.logError))
-        .pipe(concat('styles.css'))
-        .pipe(sourcemaps.write())
+        .pipe(cleanCSS())
+        //.pipe(sourcemaps.write())
         .pipe(gulp.dest(dest.css));
 });
 
@@ -82,5 +72,5 @@ gulp.task('server', function() {
         }));
 });
 
-gulp.task('build', ['vendor_css', 'views', 'scss', 'scripts', 'server', 'scss:watch', 'views:watch']);
+gulp.task('build', ['views', 'scss', 'scripts', 'server', 'scss:watch', 'views:watch']);
 gulp.task('default', ['build']);

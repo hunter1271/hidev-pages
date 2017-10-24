@@ -1,3 +1,8 @@
+@import "../../node_modules/bootstrap/scss/bootstrap.scss";
+@import "../../node_modules/select2/dist/css/select2.css";
+
+@import "../../node_modules/select2-bootstrap-theme/dist/select2-bootstrap.css";
+
 // Import blocks
 @import "block/card-job";
 @import "block/description";
