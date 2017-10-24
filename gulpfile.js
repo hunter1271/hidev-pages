@@ -11,12 +11,13 @@ var gulp       = require('gulp'),
 var sources = {
     vendor_css: [
     ],
-    vendor_js: [
+    scripts: [
         'node_modules/jquery/dist/jquery.min.js',
         'node_modules/popper.js/dist/umd/popper.min.js',
         'node_modules/bootstrap/dist/js/bootstrap.js',
         'node_modules/geocomplete/jquery.geocomplete.js',
         'node_modules/select2/dist/js/select2.full.js',
+        'node_modules/quill/dist/quill.min.js',
         'src/script/script.js',
     ],
     views: ['src/*.pug', 'src/*/*.pug'],
@@ -30,7 +31,7 @@ var dest = {
 };
 
 gulp.task('scripts', function () {
-    return gulp.src(sources.vendor_js)
+    return gulp.src(sources.scripts)
         .pipe(sourcemaps.init())
         .pipe(concat('scripts.js'))
         .pipe(sourcemaps.write())
@@ -47,6 +48,10 @@ gulp.task('views', function () {
 
 gulp.task('views:watch', function () {
     gulp.watch(sources.views, ['views']);
+});
+
+gulp.task('scripts:watch', function () {
+    gulp.watch(sources.scripts, ['scripts']);
 });
 
 gulp.task('scss', function (){
@@ -72,5 +77,5 @@ gulp.task('server', function() {
         }));
 });
 
-gulp.task('build', ['views', 'scss', 'scripts', 'server', 'scss:watch', 'views:watch']);
+gulp.task('build', ['views', 'scss', 'scripts', 'server', 'scss:watch', 'views:watch', 'scripts:watch']);
 gulp.task('default', ['build']);
