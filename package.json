@@ -10,6 +10,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "@ckeditor/ckeditor5-build-classic": "^1.0.0-alpha.1",
     "bootstrap": "^4.0.0-beta",
     "geocomplete": "^1.7.0",
     "jquery": "^3.2.1",
@@ -19,7 +20,9 @@
     "select2-bootstrap-theme": "0.1.0-beta.10"
   },
   "devDependencies": {
+    "babel-preset-env": "^1.6.1",
     "gulp": "^3.9.1",
+    "gulp-babel": "^7.0.0",
     "gulp-clean-css": "^3.9.0",
     "gulp-concat": "^2.6.1",
     "gulp-include": "^2.3.1",

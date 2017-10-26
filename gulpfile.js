@@ -17,7 +17,7 @@ var sources = {
         'node_modules/bootstrap/dist/js/bootstrap.js',
         'node_modules/geocomplete/jquery.geocomplete.js',
         'node_modules/select2/dist/js/select2.full.js',
-        'node_modules/quill/dist/quill.min.js',
+        'node_modules/@ckeditor/ckeditor5-build-classic/build/ckeditor.js',
         'src/script/script.js',
     ],
     views: ['src/*.pug', 'src/*/*.pug'],

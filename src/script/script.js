@@ -11,22 +11,23 @@ $(function() {
         allowClear: true,
     });
 
-    var descriptionInput = $("#job_description");
-
-    var toolbarOptions = [
-        [{ 'header': [1, 2, 3, false]}],
-        ['bold', 'italic', 'underline'],
-        [{ 'list': 'bullet' }]
-    ];
-    var quill = new Quill("#job_description_editor", {
-        modules: {
-            toolbar: toolbarOptions
+    var editorConfig = {
+        toolbar: [ 'headings', 'bold', 'italic', 'bulletedList', 'numberedList' ],
+        heading: {
+            options: [
+                { modelElement: 'paragraph', title: 'Paragraph', class: 'ck-heading_paragraph' },
+                { modelElement: 'heading', viewElement: 'h5', title: 'Heading', class: 'ck-heading_heading2' },
+            ]
         },
-        placeholder: 'Job description here',
-        theme: "snow"
-    });
-    
-    quill.on('text-change', function () {
-        descriptionInput.val(quill.root.innerHTML);
-    })
+        removePlugins: [ 'Link' ]
+    };
+
+    ClassicEditor
+        .create(document.querySelector('#job_description'), editorConfig)
+        .then(function (editor) {
+            console.log(editor);
+        })
+        .catch(function (error) {
+            console.log(error);
+        });
 });
