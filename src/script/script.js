@@ -15,11 +15,11 @@ $(function() {
         toolbar: [ 'headings', 'bold', 'italic', 'bulletedList', 'numberedList' ],
         heading: {
             options: [
-                { modelElement: 'paragraph', title: 'Paragraph', class: 'ck-heading_paragraph' },
                 { modelElement: 'heading', viewElement: 'h5', title: 'Heading', class: 'ck-heading_heading2' },
+                { modelElement: 'paragraph', title: 'Paragraph', class: 'ck-heading_paragraph' },
             ]
         },
-        removePlugins: [ 'Link' ]
+        removePlugins: [ 'Link' ],
     };
 
     ClassicEditor
